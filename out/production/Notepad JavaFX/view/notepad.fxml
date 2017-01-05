@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox fx:controller="controller.NotepadController" fx:id="vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="menuItemNewFile" mnemonicParsing="false" onAction="#handleMenuItemNewFile" text="New File" />
+                  <MenuItem fx:id="menuItemOpen" mnemonicParsing="false" onAction="#handleMenuItemOpen" text="Open.." />
+                  <MenuItem fx:id="menuItemSave" mnemonicParsing="false" onAction="#handleMenuItemSave" text="Save" />
+                  <MenuItem fx:id="menuItemSaveAs" mnemonicParsing="false" onAction="#handleMenuItemSaveAs" text="Save as.." />
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="textArea" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>
