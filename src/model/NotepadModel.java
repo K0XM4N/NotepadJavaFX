@@ -1,11 +1,15 @@
 package model;
 
 import controller.NotepadController;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
 import service.SavingFileService;
 
 import java.io.IOException;
@@ -17,6 +21,8 @@ import java.util.ResourceBundle;
  */
 public class NotepadModel {
 
+    @FXML
+    private MenuBar menuBar;
     @FXML
     private MenuItem menuItemNewFile, menuItemOpen, menuItemSave, menuItemSaveAs;
     @FXML
@@ -46,11 +52,15 @@ public class NotepadModel {
         }
         return notepadModel;
     }
-    
+
 
     public void setNotepadController(NotepadController notepadController) {
         this.notepadController = notepadController;
     }
 
+
+    public void saveFile(Stage stage){
+        savingFileService.saveContentAss(stage);
+    }
 
 }

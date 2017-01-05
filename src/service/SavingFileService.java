@@ -1,8 +1,11 @@
 package service;
 
 import javafx.scene.control.TextArea;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.PrintWriter;
 
 /**
@@ -16,6 +19,11 @@ public class SavingFileService {
         this.textArea = textArea;
     }
 
+    public void saveContentAss(Stage stageWindow){
 
+        FileChooser fileChooser = new FileChooser();
+        File savedFile = fileChooser.showSaveDialog(stageWindow);
+
+    }
 
 }
