@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/controller/NotepadController.java" afterPath="$PROJECT_DIR$/src/controller/NotepadController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/NotepadModel.java" afterPath="$PROJECT_DIR$/src/model/NotepadModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/SavingFileService.java" afterPath="$PROJECT_DIR$/src/service/SavingFileService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -96,8 +94,8 @@
       <file leaf-file-name="NotepadModel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/NotepadModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4080944" vertical-offset="383" max-vertical-offset="1407">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.50421584" vertical-offset="709" max-vertical-offset="1302">
+              <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,8 +155,8 @@
         <option value="$PROJECT_DIR$/src/main/Main.java" />
         <option value="$PROJECT_DIR$/src/view/notepad.fxml" />
         <option value="$PROJECT_DIR$/src/controller/NotepadController.java" />
-        <option value="$PROJECT_DIR$/src/model/NotepadModel.java" />
         <option value="$PROJECT_DIR$/src/service/SavingFileService.java" />
+        <option value="$PROJECT_DIR$/src/model/NotepadModel.java" />
       </list>
     </option>
   </component>
@@ -562,12 +560,19 @@
       <option name="number" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1483636819736" duration="5870000" />
+      <workItem from="1483636819736" duration="5955000" />
     </task>
+    <task id="LOCAL-00001" summary="NotepadModel getInstance method updated. Added savingFileService field to NotepadModel">
+      <created>1483643238836</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1483643238836</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7172000" />
+    <option name="totallyTimeSpent" value="7257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -620,6 +625,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="NotepadModel getInstance method updated. Added savingFileService field to NotepadModel" />
+    <option name="LAST_COMMIT_MESSAGE" value="NotepadModel getInstance method updated. Added savingFileService field to NotepadModel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -708,8 +715,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/NotepadModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4080944" vertical-offset="383" max-vertical-offset="1407">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.50421584" vertical-offset="709" max-vertical-offset="1302">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

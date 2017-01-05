@@ -46,12 +46,7 @@ public class NotepadModel {
         }
         return notepadModel;
     }
-
-    public void getNotepadController() throws IOException {
-
-        FXMLLoader loader = FXMLLoader.load(getClass().getResource("/view/notepad.fxml"));
-        notepadController = loader.getController();
-    }
+    
 
     public void setNotepadController(NotepadController notepadController) {
         this.notepadController = notepadController;
