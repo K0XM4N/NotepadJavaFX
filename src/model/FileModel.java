@@ -42,12 +42,12 @@ public class FileModel {
         this.isSaved = isSaved;
     }
 
-    public boolean isSaved(){
+    public void isSaved(){
         if (fileContent.equals(fileContentBeforeSave)){
-            return true;
+            this.isSaved = true;
         }
         else{
-            return false;
+            this.isSaved = false;
         }
     }
 

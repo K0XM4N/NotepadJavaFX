@@ -31,6 +31,30 @@ public class SavingFileService {
         this.textArea = textArea;
     }
 
+    /**
+     *
+     * writeToFile Method - Writes text from TextArea (actually from FileModel's contentBeforeSave field) to a file.txt
+     * where file - name of txt file
+     *
+     * **/
+    private void writeToFile(String textContent, File savedFile) throws IOException {
+        fileModel.setAllFields(savedFile.getAbsolutePath(),savedFile.getName(),textContent,true);
+
+        fileWriter = new FileWriter(savedFile);
+        writer = new PrintWriter(fileWriter);
+        Scanner inputText = new Scanner(textContent);
+
+        while (inputText.hasNextLine()) {
+            writer.print(inputText.nextLine());
+            if (inputText.hasNextLine()) {
+                writer.print("\r\n");
+            }
+        }
+        writer.close();
+        inputText.close();
+    }
+
+
     public void saveContentAss(Stage stageWindow) throws IOException {
 
         String textContent = fileModel.getFileContentBeforeSave();
@@ -43,34 +67,25 @@ public class SavingFileService {
         File savedFile = fileChooser.showSaveDialog(stageWindow);
 
         if (savedFile != null) {
-
-            fileModel.setAllFields(savedFile.getAbsolutePath(),savedFile.getName(),textContent,true);
-
-            fileWriter = new FileWriter(savedFile);
-            writer = new PrintWriter(fileWriter);
-            Scanner inputText = new Scanner(textContent);
-
-            while (inputText.hasNextLine()) {
-                writer.print(inputText.nextLine());
-                if (inputText.hasNextLine()) {
-                    writer.print("\r\n");
-                }
-            }
-            writer.close();
-            inputText.close();
+            writeToFile(textContent, savedFile);
         }
     }
 
-    public void saveContent(Stage stageWindow) throws IOException {
-        fileModel.setFileContentBeforeSave(textArea.getText());
 
-        if (fileModel.getFileContent().isEmpty() || !fileModel.isSaved()){
+    public void saveContent(Stage stageWindow) throws IOException {
+
+        fileModel.setFileContentBeforeSave(textArea.getText());
+        fileModel.isSaved();
+
+        if (fileModel.getFileContent().isEmpty() || fileModel.getPath().equals("Default Path")){
             saveContentAss(stageWindow);
         }
-        else if (!fileModel.getFileContent().isEmpty() && !fileModel.isSaved()){
-
+        else if (!fileModel.getFileContent().isEmpty() && !fileModel.getIsSaved()){
+            File savedFile = new File(fileModel.getPath());
+            writeToFile(fileModel.getFileContentBeforeSave(),savedFile);
         }
 
         fileModel.setFileContent(textArea.getText());
+
     }
 }
