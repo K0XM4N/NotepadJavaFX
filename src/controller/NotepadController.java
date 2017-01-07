@@ -46,7 +46,7 @@ public class NotepadController {
 
     }
 
-    public void handleMenuItemSaveAs(ActionEvent event) {
+    public void handleMenuItemSaveAs(ActionEvent event) throws IOException {
         Stage window = (Stage) menuBar.getScene().getWindow();
         notepadModel.saveFile(window);
     }

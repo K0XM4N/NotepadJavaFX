@@ -5,6 +5,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
+import java.util.Scanner;
 
 /**
  * Created by Krzysztof on 2017-01-05.
@@ -20,24 +21,33 @@ public class SavingFileService {
         this.textArea = textArea;
     }
 
-    public void saveContentAss(Stage stageWindow){
+    public void saveContentAss(Stage stageWindow) throws IOException {
+
+        String textContent = textArea.getText();
 
         FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Text files (*.txt)", "*.txt"),
+                new FileChooser.ExtensionFilter("All files (*.*)","*.*"));
+
         File savedFile = fileChooser.showSaveDialog(stageWindow);
-        
-        try {
 
-            writer = new PrintWriter(savedFile);
-            writer.println(textArea.getText());
+        if (savedFile != null) {
+            fileWriter = new FileWriter(savedFile);
+            writer = new PrintWriter(fileWriter);
+            Scanner inputText = new Scanner(textContent);
+
+            while (inputText.hasNextLine()) {
+                writer.print(inputText.nextLine());
+                if (inputText.hasNextLine()) {
+                    writer.print("\r\n");
+                }
+            }
+
             writer.close();
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+            inputText.close();
         }
-
-
     }
+
 
 }

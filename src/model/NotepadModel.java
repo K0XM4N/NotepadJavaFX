@@ -59,7 +59,7 @@ public class NotepadModel {
     }
 
 
-    public void saveFile(Stage stage){
+    public void saveFile(Stage stage) throws IOException {
         savingFileService.saveContentAss(stage);
     }
 
