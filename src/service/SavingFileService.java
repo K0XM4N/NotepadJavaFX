@@ -27,8 +27,9 @@ public class SavingFileService {
 
 
 
-    public SavingFileService(TextArea textArea){
+    public SavingFileService(TextArea textArea, FileModel fileModel){
         this.textArea = textArea;
+        this.fileModel = fileModel;
     }
 
     /**
