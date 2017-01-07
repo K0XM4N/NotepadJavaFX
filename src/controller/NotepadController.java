@@ -8,6 +8,7 @@ import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import model.NotepadModel;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class NotepadController {
@@ -38,8 +39,9 @@ public class NotepadController {
 
     }
 
-    public void handleMenuItemOpen(ActionEvent event) {
-
+    public void handleMenuItemOpen(ActionEvent event) throws FileNotFoundException {
+        Stage window = (Stage) menuBar.getScene().getWindow();
+        notepadModel.openFile(window);
     }
 
     public void handleMenuItemSave(ActionEvent event) throws IOException {
