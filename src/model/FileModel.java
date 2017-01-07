@@ -51,6 +51,14 @@ public class FileModel {
         }
     }
 
+    public void setDefaultSettings(){
+        this.name = "Untitled";
+        this.path = "Default path";
+        this.fileContent = "";
+        this.fileContentBeforeSave = "";
+        this.isSaved = false;
+    }
+
 
     //-------------SETTERS--------------
 
