@@ -36,7 +36,8 @@ public class NotepadController {
 
 
     public void handleMenuItemNewFile(ActionEvent event) {
-
+        Stage window = (Stage) menuBar.getScene().getWindow();
+        notepadModel.newFile(window);
     }
 
     public void handleMenuItemOpen(ActionEvent event) throws FileNotFoundException {

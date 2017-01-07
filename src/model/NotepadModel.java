@@ -82,4 +82,8 @@ public class NotepadModel {
         openingFileService.openFile(stage);
     }
 
+    public void newFile(Stage stage){
+        creatingNewFileService.createNewFile(stage);
+    }
+
 }

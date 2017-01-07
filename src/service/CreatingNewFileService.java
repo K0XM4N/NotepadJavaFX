@@ -21,8 +21,14 @@ public class CreatingNewFileService {
         fileModel.setFileContentBeforeSave(textArea.getText());
         fileModel.isSaved();
 
-        if (fileModel.getFileContent().isEmpty() || fileModel.getIsSaved()){
-
+        if (fileModel.getFileContentBeforeSave().isEmpty() || fileModel.getIsSaved()){
+            textArea.clear();
+            fileModel.setDefaultSettings();
+            window.setTitle(fileModel.getName());
+            System.out.println("SAVED -> OPEN NEW FILE");
+        }
+        else{
+            System.out.println("NOT SAVED -> ASK USER TO SAVE OR NOT");
         }
     }
 }

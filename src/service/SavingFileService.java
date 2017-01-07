@@ -40,7 +40,6 @@ public class SavingFileService {
      * **/
     private void writeToFile(String textContent, File savedFile) throws IOException {
         fileModel.setAllFields(savedFile.getAbsolutePath(),savedFile.getName(),textContent,true);
-
         fileWriter = new FileWriter(savedFile);
         writer = new PrintWriter(fileWriter);
         Scanner inputText = new Scanner(textContent);
@@ -53,6 +52,7 @@ public class SavingFileService {
         }
         writer.close();
         inputText.close();
+
     }
 
     /**
@@ -72,6 +72,7 @@ public class SavingFileService {
 
         if (savedFile != null) {
             writeToFile(textContent, savedFile);
+            stageWindow.setTitle(fileModel.getName());
         }
     }
 

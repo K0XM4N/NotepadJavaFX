@@ -42,6 +42,7 @@ public class OpeningFileService {
             fileModel.setAllFields(openedFile.getAbsolutePath(),openedFile.getName(),textFromFile.toString(),true);
             fileModel.setFileContent(textFromFile.toString());
             textArea.setText(textFromFile.toString());
+            window.setTitle(fileModel.getName());
         }
 
     }
