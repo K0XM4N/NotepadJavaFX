@@ -3,6 +3,7 @@ package service;
 import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import model.FileModel;
 
 import java.io.*;
 import java.util.Scanner;
@@ -17,8 +18,14 @@ public class SavingFileService {
     private FileWriter fileWriter;
     private BufferedWriter buffWriter;
 
-    String content;
-    String contentBeforeSave;
+    private FileModel fileModel;
+
+    //----------------SETTERS--------------------
+    public void setFileModel(FileModel fileModel) {
+        this.fileModel = fileModel;
+    }
+
+
 
     public SavingFileService(TextArea textArea){
         this.textArea = textArea;

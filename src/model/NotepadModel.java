@@ -28,6 +28,8 @@ public class NotepadModel {
     @FXML
     private TextArea textArea;
 
+    private FileModel fileModel;
+
     NotepadController notepadController;
     SavingFileService savingFileService;
 
@@ -41,7 +43,10 @@ public class NotepadModel {
         this.menuItemSaveAs = saveAs;
         this.textArea = textArea;
 
+        fileModel = FileModel.getInstace();
         savingFileService = new SavingFileService(textArea);
+        savingFileService.setFileModel(fileModel);
+
     }
 
 

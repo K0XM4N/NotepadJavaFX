@@ -28,14 +28,14 @@ public class FileModel {
         this.isSaved = isSaved;
     }
 
-    public FileModel getInstace(){
+    public static FileModel getInstace(){
         if (fileModel == null){
             fileModel = new FileModel();
         }
         return  fileModel;
     }
 
-    public FileModel getInstance(String path,String name, String fileContent, String fileContentBeforeSave, Boolean isSaved){
+    public static FileModel getInstance(String path,String name, String fileContent, String fileContentBeforeSave, Boolean isSaved){
         if (fileModel == null){
             fileModel = new FileModel(path,name,fileContent,fileContentBeforeSave,isSaved);
         }
