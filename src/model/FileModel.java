@@ -35,10 +35,9 @@ public class FileModel {
         return  fileModel;
     }
 
-    public void setAllFields(String path,String name, String fileContent, String fileContentBeforeSave, Boolean isSaved){
+    public void setAllFields(String path,String name, String fileContentBeforeSave, Boolean isSaved){
         this.path = path;
         this.name = name;
-        this.fileContent = fileContent;
         this.fileContent = fileContentBeforeSave;
         this.isSaved = isSaved;
     }

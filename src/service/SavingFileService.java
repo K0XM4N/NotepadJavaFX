@@ -33,8 +33,7 @@ public class SavingFileService {
 
     public void saveContentAss(Stage stageWindow) throws IOException {
 
-        String textContent = textArea.getText();
-
+        String textContent = fileModel.getFileContentBeforeSave();
 
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(
@@ -44,6 +43,9 @@ public class SavingFileService {
         File savedFile = fileChooser.showSaveDialog(stageWindow);
 
         if (savedFile != null) {
+
+            fileModel.setAllFields(savedFile.getAbsolutePath(),savedFile.getName(),textContent,true);
+
             fileWriter = new FileWriter(savedFile);
             writer = new PrintWriter(fileWriter);
             Scanner inputText = new Scanner(textContent);
@@ -54,13 +56,21 @@ public class SavingFileService {
                     writer.print("\r\n");
                 }
             }
-
             writer.close();
             inputText.close();
         }
     }
 
-    public void saveContent(){
+    public void saveContent(Stage stageWindow) throws IOException {
+        fileModel.setFileContentBeforeSave(textArea.getText());
 
+        if (fileModel.getFileContent().isEmpty() || !fileModel.isSaved()){
+            saveContentAss(stageWindow);
+        }
+        else if (!fileModel.getFileContent().isEmpty() && !fileModel.isSaved()){
+
+        }
+
+        fileModel.setFileContent(textArea.getText());
     }
 }

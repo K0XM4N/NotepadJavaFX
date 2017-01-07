@@ -42,13 +42,14 @@ public class NotepadController {
 
     }
 
-    public void handleMenuItemSave(ActionEvent event) {
-
+    public void handleMenuItemSave(ActionEvent event) throws IOException {
+        Stage window = (Stage) menuBar.getScene().getWindow();
+        notepadModel.saveFile(window);
     }
 
     public void handleMenuItemSaveAs(ActionEvent event) throws IOException {
         Stage window = (Stage) menuBar.getScene().getWindow();
-        notepadModel.saveFile(window);
+        notepadModel.saveFileAs(window);
     }
 
 

@@ -64,8 +64,12 @@ public class NotepadModel {
     }
 
 
-    public void saveFile(Stage stage) throws IOException {
+    public void saveFileAs(Stage stage) throws IOException {
         savingFileService.saveContentAss(stage);
+    }
+
+    public void saveFile(Stage stage) throws IOException {
+        savingFileService.saveContent(stage);
     }
 
 }
