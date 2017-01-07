@@ -35,11 +35,12 @@ public class FileModel {
         return  fileModel;
     }
 
-    public static FileModel getInstance(String path,String name, String fileContent, String fileContentBeforeSave, Boolean isSaved){
-        if (fileModel == null){
-            fileModel = new FileModel(path,name,fileContent,fileContentBeforeSave,isSaved);
-        }
-        return fileModel;
+    public void setAllFields(String path,String name, String fileContent, String fileContentBeforeSave, Boolean isSaved){
+        this.path = path;
+        this.name = name;
+        this.fileContent = fileContent;
+        this.fileContent = fileContentBeforeSave;
+        this.isSaved = isSaved;
     }
 
     public boolean isSaved(){

@@ -35,6 +35,7 @@ public class SavingFileService {
 
         String textContent = textArea.getText();
 
+
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Text files (*.txt)", "*.txt"),
