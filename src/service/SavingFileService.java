@@ -17,6 +17,9 @@ public class SavingFileService {
     private FileWriter fileWriter;
     private BufferedWriter buffWriter;
 
+    String content;
+    String contentBeforeSave;
+
     public SavingFileService(TextArea textArea){
         this.textArea = textArea;
     }
@@ -49,5 +52,7 @@ public class SavingFileService {
         }
     }
 
+    public void saveContent(){
 
+    }
 }
