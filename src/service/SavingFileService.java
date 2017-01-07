@@ -54,7 +54,10 @@ public class SavingFileService {
         inputText.close();
     }
 
-
+    /**
+     * Method that provices saving file as new file.
+     * @param stageWindow Stage object that is needed by FileChooser to open dialog pop up.
+     * **/
     public void saveContentAss(Stage stageWindow) throws IOException {
 
         String textContent = fileModel.getFileContentBeforeSave();
@@ -72,6 +75,11 @@ public class SavingFileService {
     }
 
 
+    /**
+     * Method that provide save actual created file.
+     * @param stageWindow Stage object that is needed by FileChooser to open dialog pop up (in case
+     *                    when file was not created).
+     * **/
     public void saveContent(Stage stageWindow) throws IOException {
 
         fileModel.setFileContentBeforeSave(textArea.getText());
