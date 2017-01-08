@@ -32,12 +32,12 @@ public class NotepadController {
 
     //----------------------EVENT HANDLERS---------------------
 
-    public void handleMenuItemNewFile(ActionEvent event) {
+    public void handleMenuItemNewFile(ActionEvent event) throws IOException {
         Stage window = (Stage) menuBar.getScene().getWindow();
         notepadModel.newFile(window);
     }
 
-    public void handleMenuItemOpen(ActionEvent event) throws FileNotFoundException {
+    public void handleMenuItemOpen(ActionEvent event) throws IOException {
         Stage window = (Stage) menuBar.getScene().getWindow();
         notepadModel.openFile(window);
     }

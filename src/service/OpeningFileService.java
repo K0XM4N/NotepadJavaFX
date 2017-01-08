@@ -17,9 +17,10 @@ public class OpeningFileService {
     private NotSavedService notSavedService;
 
 
-    public OpeningFileService(TextArea textArea, FileModel fileModel){
+    public OpeningFileService(TextArea textArea, FileModel fileModel, NotSavedService notSavedService){
         this.textArea = textArea;
         this.fileModel = fileModel;
+        this.notSavedService = notSavedService;
     }
 
     private void readFromFile(Stage window) throws FileNotFoundException {
@@ -47,7 +48,7 @@ public class OpeningFileService {
 
     }
 
-    public void openFile(Stage window) throws FileNotFoundException {
+    public void openFile(Stage window) throws IOException {
 
         fileModel.setFileContentBeforeSave(textArea.getText());
         fileModel.isSaved();
@@ -58,6 +59,7 @@ public class OpeningFileService {
         }
         else{
             System.out.println("NOT SAVED -> ASK USER TO SAVE OR NOT");
+            notSavedService.loadMessageWindow();
         }
 
     }

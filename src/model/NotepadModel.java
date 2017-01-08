@@ -11,6 +11,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import service.CreatingNewFileService;
+import service.NotSavedService;
 import service.OpeningFileService;
 import service.SavingFileService;
 
@@ -37,6 +38,7 @@ public class NotepadModel {
     SavingFileService savingFileService;
     OpeningFileService openingFileService;
     CreatingNewFileService creatingNewFileService;
+    NotSavedService notSavedService;
 
     private static NotepadModel notepadModel;
 
@@ -49,9 +51,11 @@ public class NotepadModel {
         this.textArea = textArea;
 
         fileModel = FileModel.getInstace();
+        notSavedService = new NotSavedService();
         savingFileService = new SavingFileService(textArea, fileModel);
-        openingFileService = new OpeningFileService(textArea, fileModel);
-        creatingNewFileService = new CreatingNewFileService(textArea, fileModel);
+        openingFileService = new OpeningFileService(textArea, fileModel, notSavedService);
+        creatingNewFileService = new CreatingNewFileService(textArea, fileModel, notSavedService);
+
 
     }
 
@@ -78,11 +82,11 @@ public class NotepadModel {
         savingFileService.saveContent(stage);
     }
 
-    public void openFile(Stage stage) throws FileNotFoundException {
+    public void openFile(Stage stage) throws IOException {
         openingFileService.openFile(stage);
     }
 
-    public void newFile(Stage stage){
+    public void newFile(Stage stage) throws IOException {
         creatingNewFileService.createNewFile(stage);
     }
 
