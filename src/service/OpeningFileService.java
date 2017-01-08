@@ -53,7 +53,7 @@ public class OpeningFileService {
         fileModel.setFileContentBeforeSave(textArea.getText());
         fileModel.isSaved();
 
-        if (fileModel.getFileContent().isEmpty() || fileModel.getIsSaved()){
+        if (fileModel.getFileContentBeforeSave().isEmpty() || fileModel.getIsSaved()){
             System.out.println("SAVED -> OPEN NEW FILE");
             readFromFile(window);
         }

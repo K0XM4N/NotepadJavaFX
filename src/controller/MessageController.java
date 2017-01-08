@@ -25,4 +25,8 @@ public class MessageController {
     public void handleButtonCancel(ActionEvent event) {
 
     }
+
+    public void setLabelFileName(String name) {
+        labelMessage.setText(labelMessage.getText().replaceAll("\\#FILE",name));
+    }
 }

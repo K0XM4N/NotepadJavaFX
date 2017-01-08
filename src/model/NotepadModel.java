@@ -51,7 +51,7 @@ public class NotepadModel {
         this.textArea = textArea;
 
         fileModel = FileModel.getInstace();
-        notSavedService = new NotSavedService();
+        notSavedService = new NotSavedService(fileModel);
         savingFileService = new SavingFileService(textArea, fileModel);
         openingFileService = new OpeningFileService(textArea, fileModel, notSavedService);
         creatingNewFileService = new CreatingNewFileService(textArea, fileModel, notSavedService);
