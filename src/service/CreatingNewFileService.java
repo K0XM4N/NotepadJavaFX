@@ -10,6 +10,7 @@ import model.FileModel;
 public class CreatingNewFileService {
     private TextArea textArea;
     private FileModel fileModel;
+    private NotSavedService notSavedService;
 
     public CreatingNewFileService(TextArea textArea, FileModel fileModel){
         this.textArea = textArea;

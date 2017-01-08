@@ -19,6 +19,7 @@ public class SavingFileService {
     private BufferedWriter buffWriter;
 
     private FileModel fileModel;
+    private NotSavedService notSavedService;
 
     //----------------SETTERS--------------------
     public void setFileModel(FileModel fileModel) {
@@ -33,10 +34,8 @@ public class SavingFileService {
     }
 
     /**
-     *
      * writeToFile Method - Writes text from TextArea (actually from FileModel's contentBeforeSave field) to a file.txt
      * where file - name of txt file
-     *
      * **/
     private void writeToFile(String textContent, File savedFile) throws IOException {
         fileModel.setAllFields(savedFile.getAbsolutePath(),savedFile.getName(),textContent,true);

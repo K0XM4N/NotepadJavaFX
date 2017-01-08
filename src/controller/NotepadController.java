@@ -30,10 +30,7 @@ public class NotepadController {
 
     }
 
-
-    //----------------GETTERS-------------------
-
-
+    //----------------------EVENT HANDLERS---------------------
 
     public void handleMenuItemNewFile(ActionEvent event) {
         Stage window = (Stage) menuBar.getScene().getWindow();

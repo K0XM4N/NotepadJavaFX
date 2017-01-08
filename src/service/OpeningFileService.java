@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class OpeningFileService {
     private TextArea textArea;
     private FileModel fileModel;
-    private PrintWriter printWriter;
+    private NotSavedService notSavedService;
 
 
     public OpeningFileService(TextArea textArea, FileModel fileModel){
