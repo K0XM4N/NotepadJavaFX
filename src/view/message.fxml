@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox fx:controller="controller.MessageController" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="labelMessage" prefHeight="117.0" prefWidth="288.0" text="Do you want save changes to #FILE?" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="5.0" prefWidth="400.0" spacing="50.0">
+         <children>
+            <Button fx:id="buttonYes" onAction="#handleButtonYes" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="Yes" />
+            <Button fx:id="buttonNo" onAction="#handleButtonNo" mnemonicParsing="false" prefWidth="55.0" text="No" />
+            <Button fx:id="buttonCancel" onAction="#handleButtonCancel" mnemonicParsing="false" prefWidth="55.0" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
