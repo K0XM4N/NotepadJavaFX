@@ -9,15 +9,17 @@ public class FileModel {
     private String fileContent;
     private String fileContentBeforeSave;
     private Boolean isSaved;
+    private String fileOperation;
 
     private static FileModel fileModel;
 
     private FileModel(){
-        path = "Default path";
-        name = "Untitled";
-        fileContent = "";
-        fileContentBeforeSave = "";
-        isSaved = false;
+        this.path = "Default path";
+        this.name = "Untitled";
+        this.fileContent = "";
+        this.fileContentBeforeSave = "";
+        this.isSaved = false;
+        this.fileOperation = "Undefined";
     }
 
     private FileModel(String path,String name, String fileContent, String fileContentBeforeSave, Boolean isSaved){
@@ -33,6 +35,10 @@ public class FileModel {
             fileModel = new FileModel();
         }
         return  fileModel;
+    }
+
+    public void setFileOperation(String fileOperation) {
+        this.fileOperation = fileOperation;
     }
 
     public void setAllFields(String path,String name, String fileContentBeforeSave, Boolean isSaved){
@@ -104,5 +110,13 @@ public class FileModel {
 
     public static FileModel getFileModel() {
         return fileModel;
+    }
+
+    public String getOperation() {
+        return fileOperation;
+    }
+
+    public void setIsSaved() {
+        isSaved = true;
     }
 }

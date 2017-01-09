@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import model.FileModel;
 
 import java.io.IOException;
@@ -19,9 +20,21 @@ public class NotSavedService {
 
     private FileModel fileModel;
     private MessageController messageController;
+    private SavingFileService savingFileService;
+    private OpeningFileService openingFileService;
+    private CreatingNewFileService creatingNewFileService;
 
-    public NotSavedService(FileModel fileModel){
+    public NotSavedService(FileModel fileModel, SavingFileService savingFileService){
         this.fileModel = fileModel;
+        this.savingFileService = savingFileService;
+    }
+
+    public void setCreatingNewFileService(CreatingNewFileService creatingNewFileService) {
+        this.creatingNewFileService = creatingNewFileService;
+    }
+
+    public void setOpeningFileService(OpeningFileService openingFileService) {
+        this.openingFileService = openingFileService;
     }
 
     public void loadMessageWindow() throws IOException {
@@ -30,8 +43,7 @@ public class NotSavedService {
         loader.setLocation(getClass().getResource("/view/message.fxml"));
         Parent root = loader.load();
 
-        messageController = loader.getController();
-        messageController.setLabelFileName(fileModel.getName());
+        setValuesToMsgController(loader);
 
         Scene scene = new Scene(root);
         Stage window = new Stage();
@@ -42,4 +54,14 @@ public class NotSavedService {
         window.showAndWait();
 
     }
+
+    private void setValuesToMsgController(FXMLLoader loader) {
+        messageController = loader.getController();
+        messageController.setLabelFileName(fileModel.getName());
+        messageController.setSavingFileService(savingFileService);
+        messageController.setFileModel(fileModel);
+        messageController.setCreatingNewFileService(creatingNewFileService);
+        messageController.setOpeningFileService(openingFileService);
+    }
+
 }

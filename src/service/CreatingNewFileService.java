@@ -24,6 +24,7 @@ public class CreatingNewFileService {
 
         fileModel.setFileContentBeforeSave(textArea.getText());
         fileModel.isSaved();
+        fileModel.setFileOperation("create");
 
         if (fileModel.getFileContentBeforeSave().isEmpty() || fileModel.getIsSaved()){
             textArea.clear();
