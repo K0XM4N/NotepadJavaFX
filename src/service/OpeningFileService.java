@@ -60,6 +60,7 @@ public class OpeningFileService {
         }
         else{
             System.out.println("NOT SAVED -> ASK USER TO SAVE OR NOT");
+            notSavedService.setNotepadWindow(window);
             notSavedService.loadMessageWindow();
         }
 

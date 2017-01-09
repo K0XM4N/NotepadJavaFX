@@ -21,6 +21,7 @@ public class NotepadController {
     private TextArea textArea;
 
     private NotepadModel notepadModel;
+    private Stage notepadWindow;
 
 
     public void initialize() throws IOException {
@@ -33,8 +34,13 @@ public class NotepadController {
 
     //----------------------GETTERS---------------------------
     public Stage getNotepadControllerWindow(){
-        Stage window = (Stage) menuBar.getScene().getWindow();
-        return window;
+        if (menuBar != null){
+            notepadWindow = (Stage) menuBar.getScene().getWindow();
+        }
+        else{
+            System.out.println("NULL");
+        }
+        return notepadWindow;
     }
 
     //----------------------EVENT HANDLERS---------------------
@@ -60,5 +66,7 @@ public class NotepadController {
     }
 
 
-
+    public void test(){
+        System.out.println("test");
+    }
 }

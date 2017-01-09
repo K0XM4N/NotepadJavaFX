@@ -4,7 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.FileModel;
 import service.CreatingNewFileService;
@@ -22,6 +24,7 @@ public class MessageController {
     private Label labelMessage;
 
     private SavingFileService savingFileService;
+    private Stage notepadWindow;
     private Stage messageWindow;
     private FileModel fileModel;
 
@@ -29,7 +32,16 @@ public class MessageController {
     private CreatingNewFileService creatingNewFileService;
 
 
+    public void initialize() throws IOException {
+
+
+    }
+
     //--------------SETTERS------------
+    public void setNotepadWindow(Stage window) throws IOException {
+        this.notepadWindow = window;
+    }
+
     public void setSavingFileService(SavingFileService savingFileService) {
         this.savingFileService = savingFileService;
     }
@@ -62,10 +74,10 @@ public class MessageController {
     private void performFileOperations() throws IOException {
 
         if (fileModel.getOperation().equals("open")){
-            openingFileService.openFile(messageWindow);
+            openingFileService.openFile(notepadWindow);
         }
         else if (fileModel.getOperation().equals("create")){
-            creatingNewFileService.createNewFile(messageWindow);
+            creatingNewFileService.createNewFile(notepadWindow);
         }
 
         messageWindow.close();
@@ -75,18 +87,24 @@ public class MessageController {
     public void handleButtonYes(ActionEvent event) throws IOException {
 
         messageWindow = getMessageWindow(event);
-        savingFileService.saveContent(messageWindow);
+        savingFileService.saveContent(notepadWindow);
         performFileOperations();
 
     }
 
     public void handleButtonNo(ActionEvent event) throws IOException {
+
+        messageWindow = getMessageWindow(event);
+        fileModel.setFileContent(fileModel.getFileContentBeforeSave());
         performFileOperations();
+
     }
 
     public void handleButtonCancel(ActionEvent event) {
+
         messageWindow = getMessageWindow(event);
         messageWindow.close();
+
     }
 
 

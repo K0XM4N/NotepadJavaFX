@@ -20,9 +20,12 @@ public class NotSavedService {
 
     private FileModel fileModel;
     private MessageController messageController;
+
     private SavingFileService savingFileService;
     private OpeningFileService openingFileService;
     private CreatingNewFileService creatingNewFileService;
+
+    private Stage notepadWindow;
 
     public NotSavedService(FileModel fileModel, SavingFileService savingFileService){
         this.fileModel = fileModel;
@@ -37,10 +40,14 @@ public class NotSavedService {
         this.openingFileService = openingFileService;
     }
 
+    public void setNotepadWindow(Stage window){
+        this.notepadWindow = window;
+    }
+
     public void loadMessageWindow() throws IOException {
 
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/view/message.fxml"));
+        loader.setLocation(getClass().getResource("../view/message.fxml"));
         Parent root = loader.load();
 
         setValuesToMsgController(loader);
@@ -55,13 +62,14 @@ public class NotSavedService {
 
     }
 
-    private void setValuesToMsgController(FXMLLoader loader) {
+    private void setValuesToMsgController(FXMLLoader loader) throws IOException {
         messageController = loader.getController();
         messageController.setLabelFileName(fileModel.getName());
         messageController.setSavingFileService(savingFileService);
         messageController.setFileModel(fileModel);
         messageController.setCreatingNewFileService(creatingNewFileService);
         messageController.setOpeningFileService(openingFileService);
+        messageController.setNotepadWindow(notepadWindow);
     }
 
 }
