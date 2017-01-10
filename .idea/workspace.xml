@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Notepad JavaFX/service/SavingFileService.class" afterPath="$PROJECT_DIR$/out/production/Notepad JavaFX/service/SavingFileService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/interfaces/SaveFileAsService.java" afterPath="$PROJECT_DIR$/src/service/interfaces/SaveFileAsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/SaveFileService.java" afterPath="$PROJECT_DIR$/src/service/SaveFileService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -115,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaveFileAsService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SaveFileAsService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/service/interfaces/SaveFileAsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5472222" vertical-offset="89" max-vertical-offset="1071">
-              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="1071">
+              <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="41" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#424#425#0" expanded="true" />
@@ -129,15 +129,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SaveFileService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SaveFileService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/service/SaveFileService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.3875" vertical-offset="225" max-vertical-offset="1071">
+              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
-                <element signature="e#289#290#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,8 +168,8 @@
       <file leaf-file-name="SavingFileService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/service/SavingFileService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="897" max-vertical-offset="2142">
-              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="57" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1338" max-vertical-offset="2142">
+              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="80" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -224,10 +222,10 @@
         <option value="$PROJECT_DIR$/src/service/OpeningFileService.java" />
         <option value="$PROJECT_DIR$/src/controller/MessageController.java" />
         <option value="$PROJECT_DIR$/src/service/SavingFileService.java" />
-        <option value="$PROJECT_DIR$/src/service/SaveFileService.java" />
         <option value="$PROJECT_DIR$/src/service/SaveService.java" />
         <option value="$PROJECT_DIR$/src/service/interfaces/FileOperation.java" />
         <option value="$PROJECT_DIR$/src/service/interfaces/SaveFileAsService.java" />
+        <option value="$PROJECT_DIR$/src/service/SaveFileService.java" />
       </list>
     </option>
   </component>
@@ -708,7 +706,7 @@
       <workItem from="1483962604745" duration="2190000" />
       <workItem from="1483964875196" duration="2827000" />
       <workItem from="1483989925730" duration="209000" />
-      <workItem from="1484056256170" duration="1861000" />
+      <workItem from="1484056256170" duration="2055000" />
     </task>
     <task id="LOCAL-00001" summary="NotepadModel getInstance method updated. Added savingFileService field to NotepadModel">
       <created>1483643238836</created>
@@ -812,11 +810,17 @@
       <option name="project" value="LOCAL" />
       <updated>1484058350354</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Docs added to SaveFileAsService (performOperation method).">
+      <created>1484058478836</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1484058478836</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45102000" />
+    <option name="totallyTimeSpent" value="45296000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -888,7 +892,8 @@
     <MESSAGE value="Added Interface FileOperation, SaveService superclass with contstructor" />
     <MESSAGE value="Removing useless fields from SaveService superclass, writeToFile method added." />
     <MESSAGE value="Class SaveFileAsService added to project and fully implemented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Class SaveFileAsService added to project and fully implemented." />
+    <MESSAGE value="Docs added to SaveFileAsService (performOperation method)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Docs added to SaveFileAsService (performOperation method)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1387,36 +1392,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/SaveFileService.java">
+    <entry file="file://$PROJECT_DIR$/src/service/interfaces/SaveFileAsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="1071">
+          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="41" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/service/SavingFileService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="897" max-vertical-offset="2142">
-          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="57" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1338" max-vertical-offset="2142">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="80" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/interfaces/SaveFileAsService.java">
+    <entry file="file://$PROJECT_DIR$/src/service/SaveFileService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5472222" vertical-offset="89" max-vertical-offset="1071">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.3875" vertical-offset="225" max-vertical-offset="1071">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
           </folding>
         </state>
       </provider>
