@@ -6,7 +6,6 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import model.FileModel;
-import service.CreatingNewFileService;
 import service.interfaces.FileOperation;
 
 import java.io.IOException;
