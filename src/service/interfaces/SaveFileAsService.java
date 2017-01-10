@@ -19,6 +19,10 @@ public class SaveFileAsService extends SaveService implements FileOperation{
     }
 
 
+    /**
+     * Method that provices saving file as new file.
+     * @param notepadWindow Stage object that is needed by FileChooser to open dialog pop up.
+     * **/
     @Override
     public void performOperation(Stage notepadWindow) throws IOException {
 
