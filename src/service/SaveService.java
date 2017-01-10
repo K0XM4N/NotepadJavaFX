@@ -28,7 +28,7 @@ public class SaveService {
      * writeToFile Method - Writes text from TextArea (actually from FileModel's contentBeforeSave field) to a file.txt
      * where file - name of txt file
      * **/
-    private void writeToFile(String textContent, File savedFile) throws IOException {
+    protected void writeToFile(String textContent, File savedFile) throws IOException {
 
         fileModel.setAllFields(savedFile.getAbsolutePath(),savedFile.getName(),textContent,true);
         FileWriter fileWriter = new FileWriter(savedFile);
