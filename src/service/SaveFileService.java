@@ -20,6 +20,7 @@ public class SaveFileService  extends SaveService implements FileOperation{
         this.saveFileAsService = saveFileAsService;
     }
 
+
     /**
      * Method that provide save actual created file.
      * @param notepadWindow Stage object that is needed by FileChooser to open dialog pop up (in case
