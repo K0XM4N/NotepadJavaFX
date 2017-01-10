@@ -33,8 +33,6 @@ public class NewFileService implements FileOperation {
 
         fileModel.setFileContentBeforeSave(textArea.getText());
         fileModel.isSaved();
-        fileModel.setFileOperation("create");
-
 
         if (fileModel.getFileContentBeforeSave().isEmpty() || fileModel.getIsSaved()){
 

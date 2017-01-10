@@ -37,7 +37,6 @@ public class OpenFileService implements FileOperation {
 
         fileModel.setFileContentBeforeSave(textArea.getText());
         fileModel.isSaved();
-        fileModel.setFileOperation("open");
 
         if (fileModel.getFileContentBeforeSave().isEmpty() || fileModel.getIsSaved()){
             System.out.println("SAVED -> OPEN NEW FILE");

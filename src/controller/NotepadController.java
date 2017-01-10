@@ -27,7 +27,6 @@ public class NotepadController {
     public void initialize() throws IOException {
 
         notepadModel = NotepadModel.getInstance(menuItemNewFile,menuItemOpen,menuItemSave,menuItemSaveAs,textArea);
-        notepadModel.setNotepadController(this);
 
     }
 

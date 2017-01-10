@@ -23,8 +23,6 @@ public class NotSavedService {
     private MessageController messageController;
 
     private FileOperation saveFileService;
-    private OpeningFileService openingFileService;
-    private CreatingNewFileService creatingNewFileService;
 
     private Stage notepadWindow;
 
@@ -33,13 +31,6 @@ public class NotSavedService {
         this.saveFileService = saveFileService;
     }
 
-    public void setCreatingNewFileService(CreatingNewFileService creatingNewFileService) {
-        this.creatingNewFileService = creatingNewFileService;
-    }
-
-    public void setOpeningFileService(OpeningFileService openingFileService) {
-        this.openingFileService = openingFileService;
-    }
 
     public void setNotepadWindow(Stage window){
         this.notepadWindow = window;
@@ -69,8 +60,6 @@ public class NotSavedService {
         messageController.setLabelFileName(fileModel.getName());
         messageController.setSavingFileService(saveFileService);
         messageController.setFileModel(fileModel);
-        messageController.setCreatingNewFileService(creatingNewFileService);
-        messageController.setOpeningFileService(openingFileService);
         messageController.setNotepadWindow(notepadWindow);
         messageController.setFileOperation(fileOperation);
 

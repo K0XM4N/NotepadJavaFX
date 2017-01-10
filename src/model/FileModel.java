@@ -19,7 +19,6 @@ public class FileModel {
         this.fileContent = "";
         this.fileContentBeforeSave = "";
         this.isSaved = false;
-        this.fileOperation = "Undefined";
     }
 
     private FileModel(String path,String name, String fileContent, String fileContentBeforeSave, Boolean isSaved){

@@ -2,16 +2,11 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.FileModel;
 import service.CreatingNewFileService;
-import service.OpeningFileService;
-import service.SavingFileService;
 import service.interfaces.FileOperation;
 
 import java.io.IOException;
@@ -32,14 +27,8 @@ public class MessageController {
     private FileModel fileModel;
 
 
-    private OpeningFileService openingFileService;
-    private CreatingNewFileService creatingNewFileService;
 
 
-    public void initialize() throws IOException {
-
-
-    }
 
     //--------------SETTERS------------
     public void setNotepadWindow(Stage window) throws IOException {
@@ -58,14 +47,12 @@ public class MessageController {
         this.fileModel = fileModel;
     }
 
-    public void setOpeningFileService(OpeningFileService openingFileService) {
-        this.openingFileService = openingFileService;
-    }
 
-    public void setCreatingNewFileService(CreatingNewFileService creatingNewFileService) {
-        this.creatingNewFileService = creatingNewFileService;
-    }
 
+    //--------------------------SETTERS----------------------------
+    public void setFileOperation(FileOperation fileOperation) {
+        this.operation = fileOperation;
+    }
 
 
     //--------------------------GETTERS----------------------------
@@ -77,14 +64,9 @@ public class MessageController {
 
     private void performFileOperations() throws IOException {
 
-//        if (fileModel.getOperation().equals("open")){
-//            openingFileService.openFile(notepadWindow);
-//        }
-//        else if (fileModel.getOperation().equals("create")){
-//            creatingNewFileService.createNewFile(notepadWindow);
-//        }
         operation.performOperation(notepadWindow);
         messageWindow.close();
+
     }
 
 
@@ -109,10 +91,5 @@ public class MessageController {
         messageWindow = getMessageWindow(event);
         messageWindow.close();
 
-    }
-
-
-    public void setFileOperation(FileOperation fileOperation) {
-        this.operation = fileOperation;
     }
 }

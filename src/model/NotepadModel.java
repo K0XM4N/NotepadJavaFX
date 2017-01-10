@@ -25,20 +25,14 @@ import java.util.ResourceBundle;
  */
 public class NotepadModel {
 
-    @FXML
-    private MenuBar menuBar;
+
     @FXML
     private MenuItem menuItemNewFile, menuItemOpen, menuItemSave, menuItemSaveAs;
     @FXML
     private TextArea textArea;
 
     private FileModel fileModel;
-    private Window window;
 
-    private NotepadController notepadController;
-    private SavingFileService savingFileService;
-    private OpeningFileService openingFileService;
-    private CreatingNewFileService creatingNewFileService;
     private NotSavedService notSavedService;
 
     private FileOperation saveFileAsService;
@@ -67,9 +61,6 @@ public class NotepadModel {
         openFileService = new OpenFileService(textArea,fileModel,notSavedService);
         newFileService = new NewFileService(textArea,fileModel,notSavedService);
 
-        notSavedService.setOpeningFileService(openingFileService);
-        notSavedService.setCreatingNewFileService(creatingNewFileService);
-
     }
 
 
@@ -82,9 +73,6 @@ public class NotepadModel {
     }
 
 
-    public void setNotepadController(NotepadController notepadController) {
-        this.notepadController = notepadController;
-    }
 
 
     public void saveFileAs(Stage notepadWindow) throws IOException {
