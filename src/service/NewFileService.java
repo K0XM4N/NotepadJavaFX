@@ -48,7 +48,7 @@ public class NewFileService implements FileOperation {
 
             System.out.println("NOT SAVED -> ASK USER TO SAVE OR NOT");
             notSavedService.setNotepadWindow(notepadWindow);
-            notSavedService.loadMessageWindow();
+            notSavedService.loadMessageWindow(this);
 
         }
 

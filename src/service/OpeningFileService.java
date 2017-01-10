@@ -4,6 +4,7 @@ import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.FileModel;
+import service.interfaces.FileOperation;
 
 import java.io.*;
 import java.util.Scanner;
@@ -61,7 +62,7 @@ public class OpeningFileService {
         else{
             System.out.println("NOT SAVED -> ASK USER TO SAVE OR NOT");
             notSavedService.setNotepadWindow(window);
-            notSavedService.loadMessageWindow();
+            //notSavedService.loadMessageWindow();
         }
 
     }

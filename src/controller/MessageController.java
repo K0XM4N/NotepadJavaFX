@@ -12,6 +12,7 @@ import model.FileModel;
 import service.CreatingNewFileService;
 import service.OpeningFileService;
 import service.SavingFileService;
+import service.interfaces.FileOperation;
 
 import java.io.IOException;
 
@@ -23,10 +24,13 @@ public class MessageController {
     @FXML
     private Label labelMessage;
 
-    private SavingFileService savingFileService;
+    private FileOperation saveFileService;
+    private FileOperation operation;
+
     private Stage notepadWindow;
     private Stage messageWindow;
     private FileModel fileModel;
+
 
     private OpeningFileService openingFileService;
     private CreatingNewFileService creatingNewFileService;
@@ -42,8 +46,8 @@ public class MessageController {
         this.notepadWindow = window;
     }
 
-    public void setSavingFileService(SavingFileService savingFileService) {
-        this.savingFileService = savingFileService;
+    public void setSavingFileService(FileOperation saveFileService) {
+        this.saveFileService = saveFileService;
     }
 
     public void setLabelFileName(String name) {
@@ -73,13 +77,13 @@ public class MessageController {
 
     private void performFileOperations() throws IOException {
 
-        if (fileModel.getOperation().equals("open")){
-            openingFileService.openFile(notepadWindow);
-        }
-        else if (fileModel.getOperation().equals("create")){
-            creatingNewFileService.createNewFile(notepadWindow);
-        }
-
+//        if (fileModel.getOperation().equals("open")){
+//            openingFileService.openFile(notepadWindow);
+//        }
+//        else if (fileModel.getOperation().equals("create")){
+//            creatingNewFileService.createNewFile(notepadWindow);
+//        }
+        operation.performOperation(notepadWindow);
         messageWindow.close();
     }
 
@@ -87,7 +91,7 @@ public class MessageController {
     public void handleButtonYes(ActionEvent event) throws IOException {
 
         messageWindow = getMessageWindow(event);
-        savingFileService.saveContent(notepadWindow);
+        saveFileService.performOperation(notepadWindow);
         performFileOperations();
 
     }
@@ -108,5 +112,7 @@ public class MessageController {
     }
 
 
-
+    public void setFileOperation(FileOperation fileOperation) {
+        this.operation = fileOperation;
+    }
 }

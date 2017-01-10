@@ -10,6 +10,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import model.FileModel;
+import service.interfaces.FileOperation;
 
 import java.io.IOException;
 
@@ -21,15 +22,15 @@ public class NotSavedService {
     private FileModel fileModel;
     private MessageController messageController;
 
-    private SavingFileService savingFileService;
+    private FileOperation saveFileService;
     private OpeningFileService openingFileService;
     private CreatingNewFileService creatingNewFileService;
 
     private Stage notepadWindow;
 
-    public NotSavedService(FileModel fileModel, SavingFileService savingFileService){
+    public NotSavedService(FileModel fileModel, FileOperation saveFileService){
         this.fileModel = fileModel;
-        this.savingFileService = savingFileService;
+        this.saveFileService = saveFileService;
     }
 
     public void setCreatingNewFileService(CreatingNewFileService creatingNewFileService) {
@@ -44,13 +45,13 @@ public class NotSavedService {
         this.notepadWindow = window;
     }
 
-    public void loadMessageWindow() throws IOException {
+    public void loadMessageWindow(FileOperation fileOperation) throws IOException {
 
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("../view/message.fxml"));
         Parent root = loader.load();
 
-        setValuesToMsgController(loader);
+        setValuesToMsgController(loader, fileOperation);
 
         Scene scene = new Scene(root);
         Stage window = new Stage();
@@ -62,14 +63,17 @@ public class NotSavedService {
 
     }
 
-    private void setValuesToMsgController(FXMLLoader loader) throws IOException {
+    private void setValuesToMsgController(FXMLLoader loader, FileOperation fileOperation) throws IOException {
+
         messageController = loader.getController();
         messageController.setLabelFileName(fileModel.getName());
-        messageController.setSavingFileService(savingFileService);
+        messageController.setSavingFileService(saveFileService);
         messageController.setFileModel(fileModel);
         messageController.setCreatingNewFileService(creatingNewFileService);
         messageController.setOpeningFileService(openingFileService);
         messageController.setNotepadWindow(notepadWindow);
+        messageController.setFileOperation(fileOperation);
+
     }
 
 }
