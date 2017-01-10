@@ -16,10 +16,8 @@ public class SavingFileService {
     private TextArea textArea;
     private PrintWriter writer;
     private FileWriter fileWriter;
-    private BufferedWriter buffWriter;
 
     private FileModel fileModel;
-    private NotSavedService notSavedService;
 
     //----------------SETTERS--------------------
     public void setFileModel(FileModel fileModel) {
