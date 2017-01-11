@@ -15,13 +15,18 @@ import java.io.IOException;
  */
 public class SaveFileAsService extends SaveService implements FileOperation {
 
+    //---------------------------CONSTRUCTOR---------------------------------
+
     public SaveFileAsService(TextArea textArea, FileModel fileModel) {
         super(textArea, fileModel);
     }
 
 
+
+    //--------------------FUNCTIONALITY METHODS-----------------------
+
     /**
-     * Method that provices saving file as new file.
+     * Method that provides saving file as new file.
      * @param notepadWindow Stage object that is needed by FileChooser to open dialog pop up.
      * **/
     @Override
