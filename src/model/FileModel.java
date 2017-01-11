@@ -98,6 +98,9 @@ public class FileModel {
         this.path = path;
     }
 
+    public void setIsSaved() {
+        isSaved = true;
+    }
 
 
     //--------------GETTERS-----------------
@@ -125,8 +128,5 @@ public class FileModel {
     public static FileModel getFileModel() {
         return fileModel;
     }
-    
-    public void setIsSaved() {
-        isSaved = true;
-    }
+
 }
