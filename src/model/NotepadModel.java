@@ -25,7 +25,6 @@ import java.util.ResourceBundle;
  */
 public class NotepadModel {
 
-
     @FXML
     private MenuItem menuItemNewFile, menuItemOpen, menuItemSave, menuItemSaveAs;
     @FXML
@@ -41,6 +40,9 @@ public class NotepadModel {
     private FileOperation newFileService;
 
     private static NotepadModel notepadModel;
+
+
+    //------------CONSTRUCTOR N GETTIN INSTANCE--------------------
 
     private NotepadModel(MenuItem newFile, MenuItem open, MenuItem save, MenuItem saveAs, TextArea textArea){
 
@@ -63,17 +65,18 @@ public class NotepadModel {
 
     }
 
-
     public static NotepadModel getInstance(MenuItem newFile, MenuItem open, MenuItem save, MenuItem saveAs, TextArea textArea){
 
         if (notepadModel == null){
             notepadModel = new NotepadModel(newFile,open,save,saveAs,textArea);
         }
         return notepadModel;
+
     }
 
 
 
+    //--------------------FUNCTIONALITY METHODS-----------------------
 
     public void saveFileAs(Stage notepadWindow) throws IOException {
         saveFileAsService.performOperation(notepadWindow);
