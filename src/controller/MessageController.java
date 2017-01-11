@@ -37,6 +37,8 @@ public class MessageController {
     }
 
 
+    ////----------------------EVENT HANDLERS---------------------
+
     public void handleButtonYes(ActionEvent event) throws IOException {
 
         messageWindow = getMessageWindow(event);
