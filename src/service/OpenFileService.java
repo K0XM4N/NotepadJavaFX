@@ -20,12 +20,18 @@ public class OpenFileService implements FileOperation {
     private FileModel fileModel;
     private NotSavedService notSavedService;
 
+
+
+    //---------------------------CONSTRUCTOR---------------------------------
+
     public OpenFileService(TextArea textArea, FileModel fileModel, NotSavedService notSavedService){
         this.textArea = textArea;
         this.fileModel = fileModel;
         this.notSavedService = notSavedService;
     }
 
+
+    //--------------------FUNCTIONALITY METHODS-----------------------
 
     /**
      * Method that allows to open file, also provides operations that will handle if text is saved or not.
