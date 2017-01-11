@@ -4,12 +4,12 @@ package model;
  * Created by Krzysztof on 2017-01-07.
  */
 public class FileModel {
+
     private String path;
     private String name;
     private String fileContent;
     private String fileContentBeforeSave;
     private Boolean isSaved;
-    private String fileOperation;
 
     private static FileModel fileModel;
 
@@ -36,9 +36,7 @@ public class FileModel {
         return  fileModel;
     }
 
-    public void setFileOperation(String fileOperation) {
-        this.fileOperation = fileOperation;
-    }
+
 
     public void setAllFields(String path,String name, String fileContentBeforeSave, Boolean isSaved){
         this.path = path;
@@ -110,11 +108,7 @@ public class FileModel {
     public static FileModel getFileModel() {
         return fileModel;
     }
-
-    public String getOperation() {
-        return fileOperation;
-    }
-
+    
     public void setIsSaved() {
         isSaved = true;
     }

@@ -46,9 +46,6 @@ public class MessageController {
         this.fileModel = fileModel;
     }
 
-
-
-    //--------------------------SETTERS----------------------------
     public void setFileOperation(FileOperation fileOperation) {
         this.operation = fileOperation;
     }
