@@ -27,36 +27,7 @@ public class MessageController {
 
 
 
-
-
-    //--------------SETTERS------------
-    public void setNotepadWindow(Stage window) throws IOException {
-        this.notepadWindow = window;
-    }
-
-    public void setSavingFileService(FileOperation saveFileService) {
-        this.saveFileService = saveFileService;
-    }
-
-    public void setLabelFileName(String name) {
-        labelMessage.setText(labelMessage.getText().replaceAll("\\#FILE",name));
-    }
-
-    public void setFileModel(FileModel fileModel) {
-        this.fileModel = fileModel;
-    }
-
-    public void setFileOperation(FileOperation fileOperation) {
-        this.operation = fileOperation;
-    }
-
-
-    //--------------------------GETTERS----------------------------
-    public Stage getMessageWindow(ActionEvent event){
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        return window;
-    }
-
+    ////--------------------FUNCTIONALITY METHODS-----------------------
 
     private void performFileOperations() throws IOException {
 
@@ -87,5 +58,37 @@ public class MessageController {
         messageWindow = getMessageWindow(event);
         messageWindow.close();
 
+    }
+
+
+
+    //---------------------------SETTERS----------------------
+
+    public void setNotepadWindow(Stage window) throws IOException {
+        this.notepadWindow = window;
+    }
+
+    public void setSavingFileService(FileOperation saveFileService) {
+        this.saveFileService = saveFileService;
+    }
+
+    public void setLabelFileName(String name) {
+        labelMessage.setText(labelMessage.getText().replaceAll("\\#FILE",name));
+    }
+
+    public void setFileModel(FileModel fileModel) {
+        this.fileModel = fileModel;
+    }
+
+    public void setFileOperation(FileOperation fileOperation) {
+        this.operation = fileOperation;
+    }
+
+
+    //--------------------------GETTERS----------------------------
+
+    public Stage getMessageWindow(ActionEvent event){
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        return window;
     }
 }

@@ -36,7 +36,7 @@ public class OpenFileService implements FileOperation {
     public void performOperation(Stage notepadWindow) throws IOException {
 
         fileModel.setFileContentBeforeSave(textArea.getText());
-        fileModel.isSaved();
+        fileModel.checkSaveStatus();
 
         if (fileModel.getFileContentBeforeSave().isEmpty() || fileModel.getIsSaved()){
             System.out.println("SAVED -> OPEN NEW FILE");
@@ -74,7 +74,7 @@ public class OpenFileService implements FileOperation {
                 }
             }
 
-            fileModel.setAllFields(openedFile.getAbsolutePath(),openedFile.getName(),textFromFile.toString(),true);
+            fileModel.setEssentialFields(openedFile.getAbsolutePath(), openedFile.getName(), textFromFile.toString(), true);
             fileModel.setFileContent(textFromFile.toString());
             textArea.setText(textFromFile.toString());
             notepadWindow.setTitle(fileModel.getName());

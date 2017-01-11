@@ -30,7 +30,7 @@ public class SaveService {
      * **/
     protected void writeToFile(String textContent, File savedFile) throws IOException {
 
-        fileModel.setAllFields(savedFile.getAbsolutePath(),savedFile.getName(),textContent,true);
+        fileModel.setEssentialFields(savedFile.getAbsolutePath(), savedFile.getName(), textContent, true);
         FileWriter fileWriter = new FileWriter(savedFile);
         PrintWriter writer = new PrintWriter(fileWriter);
         Scanner inputText = new Scanner(textContent);

@@ -30,7 +30,7 @@ public class SaveFileService  extends SaveService implements FileOperation{
     public void performOperation(Stage notepadWindow) throws IOException {
 
         fileModel.setFileContentBeforeSave(textArea.getText());
-        fileModel.isSaved();
+        fileModel.checkSaveStatus();
 
         if (fileModel.getFileContent().isEmpty() || fileModel.getPath().equals("Default Path")){
             saveFileAsService.performOperation(notepadWindow);

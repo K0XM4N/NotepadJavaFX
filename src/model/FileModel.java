@@ -14,40 +14,50 @@ public class FileModel {
     private static FileModel fileModel;
 
 
+    //------------CONSTRUCTOR N GETTIN INSTANCE--------------------
 
     private FileModel(){
+
         this.path = "Default path";
         this.name = "Untitled";
         this.fileContent = "";
         this.fileContentBeforeSave = "";
         this.isSaved = false;
+
     }
 
     private FileModel(String path,String name, String fileContent, String fileContentBeforeSave, Boolean isSaved){
+
         this.path = path;
         this.name = name;
         this.fileContent = fileContent;
         this.fileContent = fileContentBeforeSave;
         this.isSaved = isSaved;
+
     }
 
     public static FileModel getInstace(){
+
         if (fileModel == null){
             fileModel = new FileModel();
         }
         return  fileModel;
+
     }
 
 
+    //--------------------FUNCTIONALITY METHODS-----------------------
 
-    public void setAllFields(String path,String name, String fileContentBeforeSave, Boolean isSaved){
+    public void setEssentialFields(String path, String name, String fileContentBeforeSave, Boolean isSaved){
+
         this.path = path;
         this.name = name;
         this.fileContent = fileContentBeforeSave;
         this.isSaved = isSaved;
+
     }
 
-    public void isSaved(){
+    public void checkSaveStatus(){
         if (fileContent.equals(fileContentBeforeSave)){
             this.isSaved = true;
         }
@@ -57,11 +67,13 @@ public class FileModel {
     }
 
     public void setDefaultSettings(){
+
         this.name = "Untitled";
         this.path = "Default path";
         this.fileContent = "";
         this.fileContentBeforeSave = "";
         this.isSaved = false;
+
     }
 
 

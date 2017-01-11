@@ -32,7 +32,7 @@ public class NewFileService implements FileOperation {
     public void performOperation(Stage notepadWindow) throws IOException {
 
         fileModel.setFileContentBeforeSave(textArea.getText());
-        fileModel.isSaved();
+        fileModel.checkSaveStatus();
 
         if (fileModel.getFileContentBeforeSave().isEmpty() || fileModel.getIsSaved()){
 
