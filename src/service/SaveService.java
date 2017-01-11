@@ -17,12 +17,16 @@ public class SaveService {
     protected TextArea textArea;;
     protected FileModel fileModel;
 
+    //---------------------------CONSTRUCTOR---------------------------------
+
     public SaveService(TextArea textArea, FileModel fileModel){
         this.textArea = textArea;
         this.fileModel = fileModel;
     }
 
 
+
+    //--------------------FUNCTIONALITY METHODS-----------------------
 
     /**
      * writeToFile Method - Writes text from TextArea (actually from FileModel's contentBeforeSave field) to a file.txt
