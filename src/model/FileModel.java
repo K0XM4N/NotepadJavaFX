@@ -13,6 +13,8 @@ public class FileModel {
 
     private static FileModel fileModel;
 
+
+
     private FileModel(){
         this.path = "Default path";
         this.name = "Untitled";
@@ -61,6 +63,9 @@ public class FileModel {
         this.fileContentBeforeSave = "";
         this.isSaved = false;
     }
+
+
+
 
 
     //-------------SETTERS--------------
