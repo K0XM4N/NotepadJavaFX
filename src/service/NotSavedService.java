@@ -26,15 +26,18 @@ public class NotSavedService {
 
     private Stage notepadWindow;
 
+
+
+    //--------------------------CONSTRUCTOR----------------------------
+
     public NotSavedService(FileModel fileModel, FileOperation saveFileService){
         this.fileModel = fileModel;
         this.saveFileService = saveFileService;
     }
 
 
-    public void setNotepadWindow(Stage window){
-        this.notepadWindow = window;
-    }
+
+    ////--------------------FUNCTIONALITY METHODS-----------------------
 
     public void loadMessageWindow(FileOperation fileOperation) throws IOException {
 
@@ -63,6 +66,13 @@ public class NotSavedService {
         messageController.setNotepadWindow(notepadWindow);
         messageController.setFileOperation(fileOperation);
 
+    }
+
+
+    //-------------------SETTERS----------------------
+
+    public void setNotepadWindow(Stage window){
+        this.notepadWindow = window;
     }
 
 }

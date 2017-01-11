@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="F:\backup\Studia\INF\INF\JAVA\Nauka javy\MyProjects\Notepad JavaFX\src\service\interfaces\SaveFileAsService.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Notepad JavaFX/controller/NotepadController.class" afterPath="$PROJECT_DIR$/out/production/Notepad JavaFX/controller/NotepadController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Notepad JavaFX/model/NotepadModel.class" afterPath="$PROJECT_DIR$/out/production/Notepad JavaFX/model/NotepadModel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/NotepadModel.java" afterPath="$PROJECT_DIR$/src/model/NotepadModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/FileModel.java" afterPath="$PROJECT_DIR$/src/model/FileModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/service/NotSavedService.java" afterPath="$PROJECT_DIR$/src/service/NotSavedService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="F:\backup\Studia\INF\INF\JAVA\Nauka javy\MyProjects\Notepad JavaFX\src\service\interfaces\SaveFileAsService.java" afterPath="$PROJECT_DIR$/src/service/SaveFileAsService.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,8 +88,8 @@
       <file leaf-file-name="NotepadModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/NotepadModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1953">
-              <caret line="68" column="69" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1113" max-vertical-offset="1953">
+              <caret line="68" column="33" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,20 +100,20 @@
       <file leaf-file-name="FileModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/FileModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1491" max-vertical-offset="2520">
-              <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2541">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
-                <element signature="e#2624#2625#0" expanded="true" />
-                <element signature="e#2656#2657#0" expanded="true" />
+                <element signature="e#2625#2626#0" expanded="true" />
+                <element signature="e#2657#2658#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/MessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2625" vertical-offset="231" max-vertical-offset="1974">
+            <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1974">
               <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -123,14 +122,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotSavedService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NotSavedService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/service/NotSavedService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="462" max-vertical-offset="1302">
-              <caret line="63" column="58" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
+            <state vertical-scroll-proportion="-0.16666667" vertical-offset="603" max-vertical-offset="1512">
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
               <folding>
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
+                <element signature="e#2057#2058#0" expanded="true" />
+                <element signature="e#2100#2101#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -205,14 +204,14 @@
         <option value="$PROJECT_DIR$/src/service/interfaces/SaveFileAsService.java" />
         <option value="$PROJECT_DIR$/src/service/CreatingNewFileService.java" />
         <option value="$PROJECT_DIR$/src/service/OpeningFileService.java" />
-        <option value="$PROJECT_DIR$/src/service/NotSavedService.java" />
         <option value="$PROJECT_DIR$/src/service/OpenFileService.java" />
         <option value="$PROJECT_DIR$/src/service/NewFileService.java" />
         <option value="$PROJECT_DIR$/src/service/MessageService.java" />
         <option value="$PROJECT_DIR$/src/controller/NotepadController.java" />
         <option value="$PROJECT_DIR$/src/model/NotepadModel.java" />
-        <option value="$PROJECT_DIR$/src/model/FileModel.java" />
         <option value="$PROJECT_DIR$/src/controller/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/model/FileModel.java" />
+        <option value="$PROJECT_DIR$/src/service/NotSavedService.java" />
       </list>
     </option>
   </component>
@@ -715,7 +714,7 @@
       <workItem from="1483989925730" duration="209000" />
       <workItem from="1484056256170" duration="7917000" />
       <workItem from="1484091746908" duration="108000" />
-      <workItem from="1484136535107" duration="3100000" />
+      <workItem from="1484136535107" duration="3317000" />
     </task>
     <task id="LOCAL-00001" summary="NotepadModel getInstance method updated. Added savingFileService field to NotepadModel">
       <created>1483643238836</created>
@@ -891,15 +890,21 @@
       <option name="project" value="LOCAL" />
       <updated>1484139672833</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Cleaning up project. Relocating SaveFileAsService class.">
+      <created>1484139807558</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1484139807558</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54366000" />
+    <option name="totallyTimeSpent" value="54583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19870411" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -915,7 +920,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19222462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13486141" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13486141" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -950,7 +955,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="New class added. FileModel now is base for text File in the program." />
     <MESSAGE value="Added documenation to the SavingFileService methods" />
     <MESSAGE value="Updated SavingFileService constructor." />
     <MESSAGE value="openFile method from OpeningFileService updated. Implementation of POP UP WINDOW needed." />
@@ -975,7 +979,8 @@
     <MESSAGE value="Cleaning up project. Formating code in FileModel class." />
     <MESSAGE value="Cleaning up project. Formating NotepadModel class." />
     <MESSAGE value="Cleaning up project. Formating FileModel and MessageController classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaning up project. Formating FileModel and MessageController classes." />
+    <MESSAGE value="Cleaning up project. Relocating SaveFileAsService class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaning up project. Relocating SaveFileAsService class." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1014,8 +1019,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="504" max-vertical-offset="1302">
           <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
           <folding>
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#2057#2058#0" expanded="true" />
+            <element signature="e#2100#2101#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1043,8 +1048,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="2247">
           <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
           <folding>
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#2656#2657#0" expanded="true" />
+            <element signature="e#2625#2626#0" expanded="true" />
+            <element signature="e#2657#2658#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1095,8 +1100,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#2057#2058#0" expanded="true" />
+            <element signature="e#2100#2101#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1106,8 +1111,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="273">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#2057#2058#0" expanded="true" />
+            <element signature="e#2100#2101#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1117,8 +1122,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="2016">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#2656#2657#0" expanded="true" />
+            <element signature="e#2625#2626#0" expanded="true" />
+            <element signature="e#2657#2658#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1164,8 +1169,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="273">
           <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
           <folding>
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#2057#2058#0" expanded="true" />
+            <element signature="e#2100#2101#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1175,8 +1180,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="2058">
           <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
           <folding>
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#2656#2657#0" expanded="true" />
+            <element signature="e#2625#2626#0" expanded="true" />
+            <element signature="e#2657#2658#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1222,8 +1227,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="950" max-vertical-offset="1848">
           <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
           <folding>
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#2656#2657#0" expanded="true" />
+            <element signature="e#2625#2626#0" expanded="true" />
+            <element signature="e#2657#2658#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1269,8 +1274,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1890">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#2656#2657#0" expanded="true" />
+            <element signature="e#2625#2626#0" expanded="true" />
+            <element signature="e#2657#2658#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1422,17 +1427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/service/NotSavedService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="462" max-vertical-offset="1302">
-          <caret line="63" column="58" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
-          <folding>
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/NotepadController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1134">
@@ -1443,8 +1437,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/NotepadModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1953">
-          <caret line="68" column="69" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1113" max-vertical-offset="1953">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1453,21 +1447,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/FileModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="168" max-vertical-offset="2520">
-          <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2541">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#2656#2657#0" expanded="true" />
+            <element signature="e#2625#2626#0" expanded="true" />
+            <element signature="e#2657#2658#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/MessageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2625" vertical-offset="231" max-vertical-offset="1974">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1974">
           <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/service/NotSavedService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.16666667" vertical-offset="603" max-vertical-offset="1512">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <element signature="e#2057#2058#0" expanded="true" />
+            <element signature="e#2100#2101#0" expanded="true" />
           </folding>
         </state>
       </provider>

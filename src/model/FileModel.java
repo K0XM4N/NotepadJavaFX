@@ -14,6 +14,7 @@ public class FileModel {
     private static FileModel fileModel;
 
 
+
     //------------CONSTRUCTOR N GETTIN INSTANCE--------------------
 
     private FileModel(){
