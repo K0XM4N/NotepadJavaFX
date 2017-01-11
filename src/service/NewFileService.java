@@ -16,12 +16,19 @@ public class NewFileService implements FileOperation {
     private FileModel fileModel;
     private NotSavedService notSavedService;
 
+
+
+    //---------------------------CONSTRUCTOR---------------------------------
+
     public NewFileService(TextArea textArea, FileModel fileModel, NotSavedService notSavedService){
         this.textArea = textArea;
         this.fileModel = fileModel;
         this.notSavedService = notSavedService;
     }
 
+
+
+    //--------------------FUNCTIONALITY METHODS-----------------------
 
     /**
      *  Method that allows to create a new file, also handle problem if file need to be
