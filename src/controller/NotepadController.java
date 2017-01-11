@@ -23,6 +23,8 @@ public class NotepadController {
     private NotepadModel notepadModel;
 
 
+    //-------------------INITIALIZATION----------------------
+
     public void initialize() throws IOException {
 
         notepadModel = NotepadModel.getInstance(menuItemNewFile,menuItemOpen,menuItemSave,menuItemSaveAs,textArea);

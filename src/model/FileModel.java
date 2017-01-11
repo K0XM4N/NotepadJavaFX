@@ -80,7 +80,6 @@ public class FileModel {
 
 
 
-
     //-------------SETTERS--------------
 
     public void setName(String name) {
