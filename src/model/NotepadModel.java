@@ -1,24 +1,14 @@
 package model;
 
-import controller.NotepadController;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
-import javafx.stage.Window;
 import service.*;
 import service.interfaces.FileOperation;
-import service.interfaces.SaveFileAsService;
+import service.SaveFileAsService;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 /**
  * Created by Krzysztof on 2017-01-05.

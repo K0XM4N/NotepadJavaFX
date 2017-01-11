@@ -1,10 +1,11 @@
-package service.interfaces;
+package service;
 
 import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.FileModel;
 import service.SaveService;
+import service.interfaces.FileOperation;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +13,7 @@ import java.io.IOException;
 /**
  * Created by Krzysztof on 2017-01-10.
  */
-public class SaveFileAsService extends SaveService implements FileOperation{
+public class SaveFileAsService extends SaveService implements FileOperation {
 
     public SaveFileAsService(TextArea textArea, FileModel fileModel) {
         super(textArea, fileModel);
